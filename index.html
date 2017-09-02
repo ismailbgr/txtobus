@@ -1,34 +1,24 @@
 ﻿<html>
 <head>
-<script>
-var hash = location.hash;
-function decode(){
-var decode1 = hash.substring(1);
-var decode2 = window.atob(decode1)
-var decode3 = decodeURI(decode2)
-document.getElementById("txt").innerHTML = decode3
-document.getElementById("link").innerHTML = "Bu Yazının Linki: " + window.location
-}
-
-function encode(){
-var gettxt = prompt("Çevirilecek Yazı")
-var uriencodedtxt = encodeURI(gettxt)
-location.hash = window.btoa(uriencodedtxt);
-document.getElementById("link").innerHTML = "Bu Yazının Linki: " + window.location
-}
-function main(){
-if(hash!==""){
-document.getElementById("uyari").innerHTML = "Şifreli Yazı Bulundu !!!"
-decode();
-}
-}
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+<script src="js.js"></script>
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body onload="main();">
+<div id="loadingbox">
+<div id="content" class="gizli">
 <h1>Yazı Karıştırıcı</h1>
-<p id="uyari"></p>
-<h2 id="txt"></h2>
-<h3 id="link"></h3>
-<button onclick="encode()">Şifrele</button>
+<div id="sonuc" class="gizli" style="background-color:gray;border-style: solid;border-color:black;border-width: 5px;margin:auto;">
+<h1 id="uyari"></h1>
+<h2 id="txt" style="background-color:black;color:lime;"></h2>
+<h3 id="beforelink"></h3><h3 id="link" class="gizli"></h3><button id="copybtn" onclick="copy();" class="gizli">Kopyala</button>
+</div>
+<button class="btn" onclick="encode()">+</button>
+</div>
+</div>
 </body>
 </html>
