@@ -23,7 +23,7 @@ $("#link").show()
 $("#copybtn").show()
 $("#sonuc").show()
 document.getElementById("beforelink").innerHTML = "Bu Yazının Linki: "
-document.getElementById("link").innerHTML = window.location
+document.getElementById("link").value = window.location
 }
 
 function encode(){
