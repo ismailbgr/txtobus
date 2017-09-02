@@ -1,4 +1,8 @@
 ﻿var hash = location.hash;
+function selecttxt(){
+$("#link").select()
+}
+
 function copy() {
 	var aux = document.createElement("input");
     aux.setAttribute("value", document.getElementById("link").innerHTML);
