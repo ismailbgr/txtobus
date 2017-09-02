@@ -1,6 +1,7 @@
 ﻿var hash = location.hash;
 function selecttxt(){
-$("#link").select()
+var secilecek = document.getElementById("link")
+secilecek.select()
 }
 
 function copy() {
