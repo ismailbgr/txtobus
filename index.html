@@ -15,7 +15,9 @@
 <div id="sonuc" class="gizli" style="background-color:gray;border-style: dashed;border-color:black;border-width: 5px;margin:auto;">
 <h1 id="uyari"></h1>
 <h2 id="txt" style="background-color:black;color:lime;"></h2>
-<h3 id="beforelink"></h3><input id="link" class="gizli"></input><button id="copybtn" onclick="selecttxt();" class="gizli">Kopyala</button>
+<h3 id="beforelink"></h3>
+<input type="text" onfocus="this.select();" onmouseup="return false;" class="gizli"/>
+<button id="copybtn" onclick="selecttxt();" class="gizli">Kopyala</button>
 </div>
 <button class="btn" onclick="encode()">+</button>
 </div>
