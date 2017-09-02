@@ -6,7 +6,7 @@ function copy() {
     aux.select();
 	document.execCommand("copy");
     document.body.removeChild(aux);
-
+    alert("Kopyalandı!")
 }
 
 function decode(){
