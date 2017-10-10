@@ -31,7 +31,7 @@ $("#sonuc").show()
 document.getElementById("beforelink").innerHTML = "Bu Yazının Linki: "
 document.getElementById("link").value = window.location
 }else{
-	alert("Süre Doldu")
+	alert("Bu Yazının Süresi Dolmuştur...")
 }
 }
 
