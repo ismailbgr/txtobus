@@ -15,20 +15,34 @@ function copy() {
 }
 
 function decode(){
+	var date = new Date;
+var dateday = date.getDate();
+if(dateday < 10){
+	dateday ="0"+dateday
+}
 var decode1 = hash.substring(1);
 var decode2 = window.atob(decode1)
 var decode3 = decodeURI(decode2)
-document.getElementById("txt").innerHTML = decode3
+if(decode3.substring(0,2)==dateday){
+document.getElementById("txt").innerHTML = decode3.substring(2)
 $("#link").show()
 $("#copybtn").show()
 $("#sonuc").show()
 document.getElementById("beforelink").innerHTML = "Bu Yazının Linki: "
 document.getElementById("link").value = window.location
+}else{
+	alert("Süre Doldu")
+}
 }
 
 function encode(){
+var date = new Date;
+var dateday = date.getDate();
+if(dateday < 10){
+	dateday ="0"+dateday
+}
 var gettxt = prompt("Çevirilecek Yazı")
-var uriencodedtxt = encodeURI(gettxt)
+var uriencodedtxt = encodeURI(dateday+gettxt)
 location.hash = window.btoa(uriencodedtxt);
 /*
 $("#link").show()
