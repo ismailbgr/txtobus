@@ -42,6 +42,9 @@ if(dateday < 10){
 	dateday ="0"+dateday
 }
 var gettxt = prompt("Çevirilecek Yazı")
+if(gettxt == "" || gettxt == null){
+	
+}else{
 var uriencodedtxt = encodeURI(dateday+gettxt)
 location.hash = window.btoa(uriencodedtxt);
 /*
@@ -52,6 +55,7 @@ document.getElementById("beforelink").innerHTML = "Bu Yazının Linki: "
 document.getElementById("link").innerHTML = window.location
 */
 location.reload();
+}
 }
 function main(){
 function goster(){
